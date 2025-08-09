@@ -10,13 +10,14 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test:interaction": "vitest run",
-    "test:interaction:coverage": "vitest run --coverage",
-    "test:snapshot": "vitest run --config=vitest.snapshot.config.ts",
-    "test:snapshot:update": "vitest run --config=vitest.snapshot.config.ts --update"
+    "test:interaction": "vitest run --config ./.storybook/vitest.storybook.config.ts",
+    "test:interaction:coverage": "vitest run --coverage --config ./.storybook/vitest.storybook.config.ts",
+    "test:snapshot": "vitest run --config ./.storybook/vitest.snapshot.config.ts",
+    "test:snapshot:update": "vitest run --config ./.storybook/vitest.snapshot.config.ts --update"
   },
   "dependencies": {
     "@storybook/testing-library": "^0.2.2",
+    "@types/node": "^24.2.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
