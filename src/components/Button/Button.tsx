@@ -7,7 +7,7 @@ export function Button({ label, onClick }: ButtonProps) {
   return (
     <button
       style={{
-        backgroundColor: "#007bff",
+        backgroundColor: "blue",
         color: "#fff",
         border: "none",
         padding: "10px 16px",
