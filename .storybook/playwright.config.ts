@@ -9,13 +9,39 @@ const dirname =
 
 export default defineConfig({
   testDir: path.join(dirname, "../src"),
-  testMatch: "**/*.visual.test.ts",
-  use: {
-    baseURL: "http://localhost:6006",
-  },
-  webServer: {
-    command: "yarn storybook",
-    port: 6006,
-    reuseExistingServer: !process.env.CI,
-  },
+  webServer: [
+    {
+      name: "storybook",
+      command: "yarn storybook",
+      port: 6006,
+      reuseExistingServer: !process.env.CI,
+    },
+    {
+      name: "vite-app",
+      command: "yarn dev",
+      port: 5173,
+      reuseExistingServer: !process.env.CI,
+    },
+  ],
+
+  projects: [
+    {
+      name: "visual",
+      testMatch: "**/*.visual.test.ts",
+      use: {
+        baseURL: "http://localhost:6006",
+        screenshot: "only-on-failure",
+      },
+    },
+    {
+      name: "e2e",
+      testMatch: "**/*.e2e.test.ts",
+      use: {
+        baseURL: "http://localhost:5173",
+        trace: "on-first-retry",
+        screenshot: "only-on-failure",
+        video: "retain-on-failure",
+      },
+    },
+  ],
 });

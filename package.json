@@ -14,9 +14,10 @@
     "test:interaction:coverage": "vitest run --coverage --config ./.storybook/vitest.storybook.config.ts",
     "test:snapshot": "vitest run --config ./.storybook/vitest.snapshot.config.ts",
     "test:snapshot:update": "vitest run --config ./.storybook/vitest.snapshot.config.ts --update",
-    "test:visual": "playwright test --config ./.storybook/playwright.config.ts",
-    "test:visual:update": "playwright test --config ./.storybook/playwright.config.ts --update-snapshots",
-    "test:visual:interactive": "playwright test --ui --config ./.storybook/playwright.config.ts"
+    "test:visual": "playwright test --config ./.storybook/playwright.config.ts --project visual",
+    "test:visual:update": "playwright test --config ./.storybook/playwright.config.ts --update-snapshots --project visual",
+    "test:visual:interactive": "playwright test --ui --config ./.storybook/playwright.config.ts --project visual",
+    "test:e2e": "playwright test --config ./.storybook/playwright.config.ts --project e2e"
   },
   "dependencies": {
     "@playwright/test": "^1.54.2",
