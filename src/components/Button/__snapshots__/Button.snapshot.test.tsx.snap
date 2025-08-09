@@ -2,6 +2,7 @@
 
 exports[`Primary Button Snapshot 1`] = `
 <button
+  data-testid="button"
   style="background-color: blue; color: rgb(255, 255, 255); padding: 10px 16px; border-radius: 4px; cursor: pointer; font-size: 16px;"
 >
   Click me

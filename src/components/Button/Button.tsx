@@ -6,6 +6,7 @@ export interface ButtonProps {
 export function Button({ label, onClick }: ButtonProps) {
   return (
     <button
+      data-testid="button"
       style={{
         backgroundColor: "blue",
         color: "#fff",
