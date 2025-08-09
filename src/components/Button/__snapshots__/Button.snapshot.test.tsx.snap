@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Primary Button Snapshot 1`] = `
+<button
+  style="background-color: blue; color: rgb(255, 255, 255); padding: 10px 16px; border-radius: 4px; cursor: pointer; font-size: 16px;"
+>
+  Click me
+</button>
+`;
